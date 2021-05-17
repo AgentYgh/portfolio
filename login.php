@@ -1,3 +1,11 @@
+<?php
+
+require 'config/configuration.php';
+require 'config/connect.php';
+require 'form/loginForm.php';
+
+?>
+
 <!doctype html>
 <html lang="fr">
   <head>
@@ -14,7 +22,7 @@
     
 			<nav class="navbar navbar-expand-md navbar-dark bg-dark line-bottom" >
 				<div class="div_logo_gp2" >
-					<a id="lien_logo" href="index.html"><img id="logo_gp2" src="images/logo_gp2.png" alt="logo_gp"></a>
+					<a id="lien_logo" href="index.php"><img id="logo_gp2" src="images/logo_gp2.png" alt="logo_gp"></a>
 	
 				</div>
 				<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,13 +31,13 @@
 				<div class=" div_bar collapse navbar-collapse" id="navbarNavDropdown">
 						<ul class="navbar-nav">
 								<li class="nav-item active">
-										<a class="nav-link sous_navbar" href="index.html">ACCUEIL <span class="sr-only">(current)</span></a>
+										<a class="nav-link sous_navbar" href="index.php">ACCUEIL <span class="sr-only">(current)</span></a>
 								</li>
 								<li class="nav-item">
 										<a class="nav-link sous_navbar" href="#page_present">PROJETS</a>
 								</li>
 								<li class="nav-item">
-										<a class="nav-link sous_navbar" href="about.html">À PROPOS</a>
+										<a class="nav-link sous_navbar" href="about.php">À PROPOS</a>
 								</li>
 								<li class="nav-item">
 										<a class="nav-link sous_navbar" href="#">CONTACT</a>
@@ -49,10 +57,22 @@
 					<div class="mt-4 text-center round-box bg-dark">
 						<h1 class="smaller-text text-light p-1">Login</h1>
 					</div>
-				
+					<?php
+					if ($error !== null OR !empty($error)) {
+						echo '<p class="mt-2 text-center error">';
+						if (is_array($error)) {
+							foreach ($error as $e) {
+								echo $e. '<br>';
+							}
+						} else {
+							echo $error;
+						}
+						echo '</p>';
+					}
+					?>
 					<div class="mb-4 mt-4 mx-xl-5 px-3 pb-3 pt-2 bg-dark round-box text-light">
 						<div class="container mb-3">
-							<form class="p-3">
+							<form class="p-3" action="/login.php" method="post">
 								<div class="form-group">
 									<label for="email">Address e-mail</label>
 									<input type="email" class="form-control bg-grayish round-box" name ="email" id="email" aria-describedby="emailHelp" required>
@@ -62,9 +82,6 @@
 									<label for="password">Mot de passe</label>
 									<div class="input-group is-invalid">
 										<input type="password" class="form-control bg-grayish round-box" name="password" id="password" required>
-										<div class="input-group-append">
-											<button class="btn bg-grayish round-box" type="button">👁️</button>
-										</div>
 									</div>
 								<div class="form-group form-check">
 									<input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -72,7 +89,7 @@
 								</div>
 								<button type="submit" class="btn btn-primary mt-3">Se connecter</button>
 								<div>
-									<small id="noAccount" class="form-text text-white-50 mt-2">Pas de compte? <a href="register.html">Crée un compte</a></small>
+									<small id="noAccount" class="form-text text-white-50 mt-2">Pas de compte? <a href="register.php">Crée un compte</a></small>
 								</div> 
 							</form>
 						</div>
@@ -80,7 +97,7 @@
 				</div>
 			</div>
 		</div>
-    <div class="footer-basic bg-dark line-top">
+    <div class="container-fluid footer-basic bg-dark line-top">
 			<footer>
 				<div class="social">
 					<a href="https://www.instagram.com/" target="_blank"> <img src="images/reseau/instagram.svg" alt="logo instagram"> </a>

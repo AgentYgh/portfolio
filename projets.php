@@ -21,7 +21,7 @@
     
       <nav class="navbar navbar-expand-md navbar-dark bg-dark" >
         <div class="div_logo_gp2" >
-          <a id="lien_logo" href="index.html"><img id="logo_gp2" src="images/logo_gp2.png" alt="logo_gp"></a>
+          <a id="lien_logo" href="index.php"><img id="logo_gp2" src="images/logo_gp2.png" alt="logo_gp"></a>
   
         </div>
         <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,13 +30,13 @@
         <div class=" div_bar collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link sous_navbar" href="index.html">ACCUEIL <span class="sr-only">(current)</span></a>
+                    <a class="nav-link sous_navbar" href="index.php">ACCUEIL <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link sous_navbar" href="#page_present">PROJETS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link sous_navbar" href="about.html">À PROPOS</a>
+                    <a class="nav-link sous_navbar" href="about.php">À PROPOS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link sous_navbar" href="#">CONTACT</a>
@@ -45,7 +45,7 @@
                     <a class="nav-link sous_navbar" href="#">INSCRIPTION À LA NEWSLETTER</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link sous_navbar" href="login.html">LOGIN <img src="images/logo_login.ico" alt="logo_login"> </a>
+                    <a class="nav-link sous_navbar" href="login.php">LOGIN <img src="images/logo_login.ico" alt="logo_login"> </a>
                 </li>
             </ul>
         </div>
@@ -151,9 +151,9 @@
         <a href="https://www.facebook.com/" target="_blank"> <img src="images/reseau/facebook.svg" alt="logo facebook"></a>
       </div>
       <ul class="list-inline">
-          <li class="list-inline-item"><a href="index.html">Accueil</a></li>
+          <li class="list-inline-item"><a href="index.php">Accueil</a></li>
           <li class="list-inline-item"><a href="#page_present">Projets</a></li>
-          <li class="list-inline-item"><a href="about.html">À Propos</a></li>
+          <li class="list-inline-item"><a href="about.php">À Propos</a></li>
           <li class="list-inline-item"><a href="#">Contact</a></li>
           <li class="list-inline-item"><a href="#">Newsletter</a></li>
       </ul>

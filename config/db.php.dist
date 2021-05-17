@@ -1,0 +1,6 @@
+<?php
+
+define('DB_USER', 'username here');
+define('DB_PASSWORD', 'password here');
+define('DB_HOST', 'host name here');
+define('DB_NAME', 'portfolio');
